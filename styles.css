@@ -86,13 +86,60 @@ body {
   --muted: #6b7280;        /* muted text */
   --bg: #f6f7fb;           /* page background */
   --card: #ffffff;         /* card/background surfaces */
+  --brand: #2563eb;        /* brand color */
+  --brand-dark: #1d4ed8;   /* brand dark color */
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .site-header,
 .site-footer {
   text-align: center;
   padding: 1.25rem;
+  --card: #f9fafb;
 }
+.tagline {
+  color: var(--muted);
+}
+.color-demo .color-note{
+  color: var(--brand);
+  font-weight: 700; 
+}
+.color-demo .muted{
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.bg-sample {
+  width: 100%;
+  min-height: 80px;
+  padding: 0.75rem;
+  margin-block: 0.75rem;
+  border-radius: 8px;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--brand), #22c55e);
+}
+.inline-label {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+}
+.inline-label.alt {
+  display: inline;
+  border: 1px dashed rgba(0, 0, 0, 0.18);
+}
+.copy .title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.copy .intro {
+  font-style: italic;
+  line-height: 1.6;
+  margin-top: 0.25rem;
+}
+
 
 .container {
   max-width: 900px;
@@ -116,6 +163,43 @@ body {
 .toolbar {
   padding: 0.5rem;
   border: 1px dashed rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: var(--brand);
+  color: #ffffff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.btn:hover {
+  background: var(--brand-dark);
+}
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+.product-grid .item {
+  flex: 1 1 140px;
+  min-height: 90px;
+  background: rgba(243, 244, 246, 0.8);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+.static-box {
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.05);
+  margin-bottom: 0.5rem;
 }
 
 .position-stage {
